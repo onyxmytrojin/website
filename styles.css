@@ -170,7 +170,156 @@ footer {
     color: #fff;
     text-align: center;
 }
+#girlfriend-core {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #ffa0a0; /* Light pink background */
+}
 
+#girlfriend-core h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(235, 42, 110, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* object-fit: cover !important; */
+    width : auto;
+    height: 135px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    max-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+/* Flashy Color Changing List */
+#flashy-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#flashy-list li {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+    animation: colorChange 1s infinite;
+    text-align: center;
+}
+
+/* Keyframes for the color-changing animation */
+@keyframes colorChange {
+    100% { color: #ffffff; }   /* Red */
+    /* 20% { color: #d0cd0e; }  /* Orange */
+    /* 40% { color: #07c71e; }  Yellow */
+    /* 60% { color: #05940f; }  Green */
+    /* 80% { color: #067413; }  Blue */
+    /* /100% { color: #00953e; } Violet */ 
+}
+#links {
+    background-color: #ff83bb;
+    border: 1px solid #fa7ffc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Increased width for horizontal layout */
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#links h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if needed */
+}
+
+#links li {
+    margin: 10px;
+}
+
+#links a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#links a img {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    border: 2px solid #ff83bb;;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#links a img:hover {
+    border-color: #007bff;
+}
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
